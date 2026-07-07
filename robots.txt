@@ -1,0 +1,7 @@
+# Ani-Melody — robots.txt
+# Allow all crawlers by default. Tighten this once staging/prod are split.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ani-melody.github.io/sitemap.xml

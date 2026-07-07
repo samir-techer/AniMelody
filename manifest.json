@@ -1,0 +1,19 @@
+{
+  "name": "Ani-Melody",
+  "short_name": "Ani-Melody",
+  "description": "Track, discover, and rate anime — all in one neon-charged hub.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0b16",
+  "theme_color": "#0b0b16",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
