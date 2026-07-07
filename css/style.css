@@ -474,7 +474,15 @@ input, select, textarea {
   transition: all var(--transition-fast);
 }
 
-.icon-btn:hover,
+@media (hover: hover) {
+  .icon-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--border-strong);
+    box-shadow: var(--glow-purple);
+    transform: translateY(-1px);
+  }
+}
+
 .icon-btn:focus-visible {
   color: var(--text-primary);
   border-color: var(--border-strong);
@@ -500,9 +508,11 @@ input, select, textarea {
   transition: all var(--transition-fast);
 }
 
-.profile-pill:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--glow-purple);
+@media (hover: hover) {
+  .profile-pill:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--glow-purple);
+  }
 }
 
 .profile-pill__avatar {
@@ -730,7 +740,13 @@ input, select, textarea {
   box-shadow: var(--glow-purple);
 }
 
-.btn--primary:hover,
+@media (hover: hover) {
+  .btn--primary:hover {
+    box-shadow: var(--glow-purple-soft), 0 0 0 1px rgba(var(--neon-purple-rgb), 0.4);
+    transform: translateY(-2px);
+  }
+}
+
 .btn--primary:focus-visible {
   box-shadow: var(--glow-purple-soft), 0 0 0 1px rgba(var(--neon-purple-rgb), 0.4);
   transform: translateY(-2px);
@@ -742,7 +758,14 @@ input, select, textarea {
   color: var(--text-primary);
 }
 
-.btn--secondary:hover,
+@media (hover: hover) {
+  .btn--secondary:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--glow-purple);
+    transform: translateY(-2px);
+  }
+}
+
 .btn--secondary:focus-visible {
   border-color: var(--border-strong);
   box-shadow: var(--glow-purple);
@@ -755,9 +778,11 @@ input, select, textarea {
   border: 1px solid transparent;
 }
 
-.btn--ghost:hover {
-  color: var(--text-primary);
-  border-color: var(--border-subtle);
+@media (hover: hover) {
+  .btn--ghost:hover {
+    color: var(--text-primary);
+    border-color: var(--border-subtle);
+  }
 }
 
 .btn--sm {
@@ -775,10 +800,12 @@ input, select, textarea {
     border-color var(--transition-base);
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 /* ---- Glassmorphism panel ---- */
@@ -1239,10 +1266,12 @@ input, select, textarea {
     box-shadow var(--transition-base);
 }
 
-.anime-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  .anime-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .anime-card__poster {
@@ -1307,9 +1336,11 @@ input, select, textarea {
   transition: border-color var(--transition-base), transform var(--transition-base);
 }
 
-.season-card:hover {
-  border-color: var(--border-strong);
-  transform: translateY(-3px);
+@media (hover: hover) {
+  .season-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+  }
 }
 
 .season-card__rank {
@@ -1354,9 +1385,11 @@ input, select, textarea {
   transition: transform var(--transition-base), background var(--transition-base);
 }
 
-.character-card:hover {
-  transform: translateY(-4px);
-  background: var(--bg-secondary);
+@media (hover: hover) {
+  .character-card:hover {
+    transform: translateY(-4px);
+    background: var(--bg-secondary);
+  }
 }
 
 .character-card__avatar {
@@ -1369,9 +1402,11 @@ input, select, textarea {
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.character-card:hover .character-card__avatar {
-  border-color: var(--border-strong);
-  box-shadow: var(--glow-purple);
+@media (hover: hover) {
+  .character-card:hover .character-card__avatar {
+    border-color: var(--border-strong);
+    box-shadow: var(--glow-purple);
+  }
 }
 
 .character-card__avatar .poster__monogram {
@@ -1421,9 +1456,11 @@ input, select, textarea {
   transition: border-color var(--transition-base), transform var(--transition-base);
 }
 
-.trailer-card__thumb:hover {
-  border-color: var(--border-strong);
-  transform: scale(1.02);
+@media (hover: hover) {
+  .trailer-card__thumb:hover {
+    border-color: var(--border-strong);
+    transform: scale(1.02);
+  }
 }
 
 .trailer-card__thumb .poster__monogram {
@@ -1447,8 +1484,10 @@ input, select, textarea {
   transition: transform var(--transition-fast);
 }
 
-.trailer-card__thumb:hover .trailer-card__play svg {
-  transform: scale(1.15);
+@media (hover: hover) {
+  .trailer-card__thumb:hover .trailer-card__play svg {
+    transform: scale(1.15);
+  }
 }
 
 .trailer-card__duration {
@@ -1773,7 +1812,14 @@ input, select, textarea {
     box-shadow var(--transition-base);
 }
 
-.genre-card:hover,
+@media (hover: hover) {
+  .genre-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: var(--glow-purple);
+  }
+}
+
 .genre-card:focus-visible {
   transform: translateY(-4px);
   border-color: var(--border-strong);
@@ -1787,8 +1833,10 @@ input, select, textarea {
   transition: stroke var(--transition-base);
 }
 
-.genre-card:hover svg {
-  stroke: var(--spectrum-pink);
+@media (hover: hover) {
+  .genre-card:hover svg {
+    stroke: var(--spectrum-pink);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1808,9 +1856,11 @@ input, select, textarea {
   transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
-.news-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-strong);
+@media (hover: hover) {
+  .news-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+  }
 }
 
 .news-card__image {
@@ -1844,8 +1894,10 @@ input, select, textarea {
   transition: color var(--transition-fast);
 }
 
-.news-card__link:hover {
-  color: var(--spectrum-pink);
+@media (hover: hover) {
+  .news-card__link:hover {
+    color: var(--spectrum-pink);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2012,5 +2064,276 @@ input, select, textarea {
 
   .melody-meter__row {
     grid-template-columns: 70px 1fr 34px;
+  }
+}
+
+/* ==========================================================================
+   PHASE 2.1 — MOBILE OPTIMIZATION & BUG FIXES
+   Everything below is additive on top of Phase 1 + Phase 2. Nothing above
+   this line was restructured — only the hover-guard splits noted in the
+   Phase 2.1 summary were edited in place (touch/sticky-hover fix).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   GLOBAL OVERFLOW SAFETY NET
+   Bug fix: nothing before this explicitly prevented horizontal scroll if a
+   child element (carousel, absolutely-positioned float, etc.) ever
+   exceeded the viewport width.
+   -------------------------------------------------------------------------- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+/* Note: component classes like .navbar__logo, .icon-btn svg, etc. already
+   set their own explicit width/height and win on selector specificity, so
+   they're unaffected by the generic rule above — no override needed. */
+
+/* --------------------------------------------------------------------------
+   TOUCH TARGETS (min 48×48) + MOBILE-SCALE CHROME
+   Bug fix: icon buttons, hamburger, and the profile pill were 40px —
+   under the 48px touch-target minimum. Bumped for touch widths only;
+   desktop keeps the tighter, mouse-friendly sizing.
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .icon-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hamburger {
+    width: 48px;
+    height: 48px;
+  }
+
+  .profile-pill {
+    min-height: 48px;
+  }
+
+  .btn--sm {
+    min-height: 44px;
+  }
+
+  .btn {
+    min-height: 48px;
+  }
+
+  /* Reclaim header space now that controls are bigger — hide the
+     standalone search icon and profile pill on phones; both actions
+     remain reachable via the hamburger drawer and bottom nav. */
+  .navbar__search-toggle,
+  .profile-pill {
+    display: none;
+  }
+
+  .navbar__inner {
+    gap: var(--space-3);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE NAV OVERLAY (backdrop behind the slide-in drawer)
+   Bug fix: the drawer previously had no backdrop, no click-outside-to-close,
+   and could be scrolled behind. This adds a dimmed, tappable scrim.
+   -------------------------------------------------------------------------- */
+.navbar__overlay {
+  position: fixed;
+  inset: var(--nav-height) 0 0 0;
+  background: rgba(3, 3, 8, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 898;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.navbar__overlay:not([hidden]) {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   STICKY BOTTOM NAVIGATION
+   Mobile-only thumb bar. Sits above the mobile drawer's overlay but below
+   the drawer itself, and respects safe-area insets on notched devices.
+   -------------------------------------------------------------------------- */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 850;
+  align-items: stretch;
+  justify-content: space-around;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid var(--glass-border);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.bottom-nav__link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 56px;
+  padding-block: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.bottom-nav__link svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  transition: stroke var(--transition-fast), transform var(--transition-fast);
+}
+
+.bottom-nav__link.is-active {
+  color: var(--neon-blue);
+}
+
+.bottom-nav__link.is-active svg {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 6px rgba(var(--neon-blue-rgb), 0.6));
+}
+
+.bottom-nav__link:active svg {
+  transform: scale(0.9);
+}
+
+@media (max-width: 860px) {
+  .bottom-nav {
+    display: flex;
+  }
+
+  /* Keep fixed bottom nav from ever covering the last bit of content */
+  body {
+    padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   TRENDING / CHARACTERS / TRAILERS — swipeable on mobile & tablet
+   Bug fix + spec requirement: Characters and Trailers were CSS grids that
+   just stacked into narrow columns on small screens (cramped avatars,
+   squeezed thumbnails). They now scroll horizontally like Trending does,
+   and revert to a full grid once there's room at desktop widths.
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .character-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-4);
+    padding-bottom: var(--space-2);
+    scrollbar-width: none;
+  }
+
+  .character-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .character-card {
+    flex: 0 0 120px;
+    scroll-snap-align: start;
+  }
+
+  .trailer-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-4);
+    padding-bottom: var(--space-2);
+    scrollbar-width: none;
+  }
+
+  .trailer-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trailer-card {
+    flex: 0 0 min(78vw, 320px);
+    scroll-snap-align: start;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HERO SEARCH — cleaner stacking at narrow widths
+   Bug fix: the earlier flex-wrap fallback let the submit button wrap onto
+   its own line unpredictably. Grid gives a stable 2-row layout instead.
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero__search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon input"
+      "btn  btn";
+    row-gap: var(--space-3);
+    column-gap: var(--space-3);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3);
+  }
+
+  .hero__search svg { grid-area: icon; align-self: center; }
+  .hero__search input { grid-area: input; }
+  .hero__search button { grid-area: btn; width: 100%; }
+}
+
+/* --------------------------------------------------------------------------
+   SMALL-SCREEN TYPOGRAPHY & SPACING (360–430px primary target)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .section { padding-block: var(--space-8); }
+  .hero { padding-block: var(--space-6) var(--space-8); }
+
+  .hero__title { font-size: 1.9rem; }
+  .hero__subtitle { font-size: var(--fs-sm); }
+
+  .section__title { font-size: var(--fs-xl); }
+  .section__eyebrow { font-size: 0.65rem; }
+
+  .hero__banner { max-width: 220px; }
+  .hero__float { width: 84px; }
+
+  .melody-spotlight { flex-direction: column; }
+  .melody-spotlight__poster { width: 100%; max-width: 160px; margin-inline: auto; }
+
+  .cta__inner { padding: var(--space-8) var(--space-4); }
+  .cta__inner h2 { font-size: var(--fs-2xl); }
+}
+
+@media (max-width: 380px) {
+  .container { padding-inline: var(--space-3); }
+  .hero__title { font-size: 1.65rem; }
+  .genre-card { padding: var(--space-4) var(--space-2); font-size: var(--fs-sm); }
+  .character-card { flex-basis: 104px; }
+  .character-card__avatar { width: 80px; height: 80px; }
+}
+
+/* --------------------------------------------------------------------------
+   LOADING PERFORMANCE
+   Bug fix: footer logo was eager-loaded despite being far below the fold.
+   -------------------------------------------------------------------------- */
+.footer__logo {
+  content-visibility: auto;
+}
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION — extend Phase 1's guard to the new hero particle field
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero__particle {
+    display: none;
   }
 }
