@@ -61,6 +61,7 @@
   function initMobileMenu() {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('navbarOverlay');
     if (!hamburger || !mobileMenu) return;
 
     function closeMenu() {
@@ -69,6 +70,7 @@
       hamburger.setAttribute('aria-label', 'Open menu');
       mobileMenu.classList.remove('is-open');
       document.body.style.overflow = '';
+      if (overlay) overlay.hidden = true;
     }
 
     function openMenu() {
@@ -77,12 +79,18 @@
       hamburger.setAttribute('aria-label', 'Close menu');
       mobileMenu.classList.add('is-open');
       document.body.style.overflow = 'hidden';
+      if (overlay) overlay.hidden = false;
     }
 
     hamburger.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.contains('is-open');
       isOpen ? closeMenu() : openMenu();
     });
+
+    // Tapping the dimmed backdrop closes the drawer — expected mobile pattern
+    if (overlay) {
+      overlay.addEventListener('click', closeMenu);
+    }
 
     // Close when a nav link inside the drawer is tapped
     mobileMenu.querySelectorAll('a').forEach((link) => {
@@ -156,7 +164,7 @@
      ------------------------------------------------------------------------ */
   function initActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navbar__link').forEach((link) => {
+    document.querySelectorAll('.navbar__link, .bottom-nav__link').forEach((link) => {
       const href = link.getAttribute('href');
       link.classList.toggle('is-active', href === currentPage);
     });
