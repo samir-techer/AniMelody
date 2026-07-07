@@ -80,7 +80,7 @@
           </svg>
         </button>
 
-        <a href="search.html" class="icon-btn" aria-label="Search anime">
+        <a href="search.html" class="icon-btn navbar__search-toggle" aria-label="Search anime">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="7"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -98,6 +98,9 @@
       </div>
     </div>
 
+    <!-- Backdrop behind the mobile drawer — click to close -->
+    <div class="navbar__overlay" id="navbarOverlay" hidden></div>
+
     <!-- Mobile drawer -->
     <nav class="navbar__mobile" id="mobileMenu" aria-label="Mobile">
       <a href="index.html" class="navbar__link is-active">Home</a>
@@ -110,6 +113,31 @@
       </div>
     </nav>
   </header>
+
+  <!-- ==========================================================
+       STICKY BOTTOM NAVIGATION (mobile only)
+       Thumb-reachable primary actions for one-handed use. Hidden
+       automatically on tablet/desktop widths via CSS.
+       ========================================================== -->
+  <nav class="bottom-nav" aria-label="Primary mobile">
+    <a href="index.html" class="bottom-nav__link is-active">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg>
+      <span>Home</span>
+    </a>
+    <a href="anime.html" class="bottom-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+      <span>Anime</span>
+    </a>
+    <a href="search.html" class="bottom-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <span>Search</span>
+    </a>
+    <a href="settings.html" class="bottom-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"></path></svg>
+      <span>Settings</span>
+    </a>
+  </nav>
+
 
   <!-- ==========================================================
        MAIN CONTENT — Phase 2: Premium Homepage
